@@ -13,7 +13,11 @@
             width: 500px;
             border-collapse: collapse;
             position: relative;
+            overflow-x: auto;
             
+        }
+        col.cmedia{
+            background-color: blue;
         }
         caption{
             font-size: 1.5em;
@@ -243,18 +247,25 @@
     <br>
 
     <table>
+        <colgroup>
+            <col class="carea">
+            <col class="cdis">
+            <col class="cnota1">
+            <col class="cnota2">
+            <col class="cmedia">
+        </colgroup>
         <thead>
             <tr>
                 <th scope="row">Área</th>
-                <th scope="">Disciplinas</th>
-                <th>Notas1</th>
-                <th>Notas2 </th>
-                <th>Média</th>
+                <th scope="row">Disciplinas</th>
+                <th scope="row">Notas1</th>
+                <th scope="row">Notas2 </th>
+                <th scope="row">Média</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="4">Exatas</th>
+                <th rowspan="4" scope="colgroup">Exatas</th>
                 <td>Matemática</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -279,11 +290,11 @@
                 <td>0.0</td>
             </tr>
             <tr>
-                <th colspan="4">Média de Exatas</th>
+                <th colspan="4" scope="col">Média de Exatas</th>
                 <td>0.0</td>
             </tr>
             <tr>
-                <th rowspan="2">Humanas</th>
+                <th rowspan="2" scope="rowgroup">Humanas</th>
                 <td>História</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -296,7 +307,7 @@
                 <td>0.0</td>
             </tr>
             <tr>
-                <th colspan="4">Média de Humanas</th>
+                <th colspan="4" scope="col">Média de Humanas</th>
                 <td>0.0</td>
             </tr>
             
